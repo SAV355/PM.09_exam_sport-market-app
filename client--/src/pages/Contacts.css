@@ -1,0 +1,72 @@
+.contacts-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.contacts-container h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 50px;
+}
+
+/* Сетка для карточек контактов */
+.contacts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+/* Карточка контакта */
+.contact-card {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+}
+
+.icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.contact-card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.contact-card p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #444;
+}
+
+.contact-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
+
+.note {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #888;
+}

@@ -1,0 +1,53 @@
+.header {
+    background-color: var(--white);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+.nav a {
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: var(--accent-color);
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.call-btn {
+    font-size: 14px;
+    padding: 8px 15px;
+}
+
+/* Адаптив для мобильных (скрываем меню на очень маленьких экранах пока что) */
+@media (max-width: 768px) {
+    .nav {
+    display: none; /* В будущем можно добавить бургер-меню */
+    }
+}
