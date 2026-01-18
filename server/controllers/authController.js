@@ -17,7 +17,7 @@ export const registerUser = async (req, res) => {
 
         const user = await User.create({ fullName, email, password: hashedPassword });
 
-      // Сразу назначаем админом первого пользователя для тестов (опционально)
+      // Для проверки назначается админом первый пользователь
       // if (user.email === 'admin@admin.com') { user.role = 'admin'; await user.save(); }
 
     res.status(201).json({

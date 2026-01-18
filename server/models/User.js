@@ -1,5 +1,16 @@
 import mongoose from 'mongoose';
+//упращенная схема пользователя 
+const userSchema = new mongoose.Schema({
+    username: { type: String, required: true },
+    email: { type: String, required: true, unique: true },
+    password: { type: String, required: true },
+    role: { type: String, default: 'user' },
+});
 
+export default mongoose.model('User', userSchema);
+
+/*
+Предыдущая схема пользователя: (расширенная версия)
 const userSchema = new mongoose.Schema({
     username: { type: String, required: true },
     email: { type: String, required: true, unique: true },
@@ -14,5 +25,4 @@ const userSchema = new mongoose.Schema({
         zip: String,
     },
 });
-
-export default mongoose.model('User', userSchema);
+*/

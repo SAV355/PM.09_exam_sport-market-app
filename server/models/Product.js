@@ -1,6 +1,25 @@
 import mongoose from 'mongoose';
 
 const productSchema = new mongoose.Schema({
+    title: String,
+    description: String,
+    price:  Number,
+
+    category: String,
+    subcategory: String,
+
+    sizes: [ String ], // Массив доступных размеров (S, M, L, 42, 43...)
+    images: [ String ], // Массив ссылок на фото
+    inStock: { type: Boolean, default: true },
+    colors: [ String ], // Массив доступных цветов
+}, 
+{ timestamps: true });
+
+export default mongoose.model('Product', productSchema);
+
+// Предыдущая схема продукта:
+/*
+const productSchema = new mongoose.Schema({
     title: { type: String, required: true },
     description: { type: String, required: true },
     price: { type: Number, required: true },
@@ -12,5 +31,4 @@ const productSchema = new mongoose.Schema({
     inStock: { type: Boolean, default: true },
     isFeatured: { type: Boolean, default: false } // Для вывода в "Популярное" или на главной
 }, { timestamps: true });
-
-export default mongoose.model('Product', productSchema);
+*/

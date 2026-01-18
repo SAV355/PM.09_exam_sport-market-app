@@ -3,8 +3,14 @@ import { registerUser, loginUser } from '../controllers/authController.js';
 import { getProducts, getProductById, createProduct } from '../controllers/productController.js';
 import { getCategories, createCategory, getContent, createContent, getSettings, updateSettings } from '../controllers/contentController.js';
 import { protect, admin } from '../middleware/authMiddleware.js';
+// import authRoutes from "./routes/authRoutes.js";
 
 const router = express.Router();
+
+// Добавлен в виде тестирования регистрации пользователя 
+// app.use("/api/auth", authRoutes);   // приводит к ошибке требует уточнения и исправления 
+// образец ошибки [nodemon] app crashed - waiting for file changes before starting...
+
 
 // Авторизация
 router.post('/auth/register', registerUser);
